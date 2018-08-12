@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Touchtest</title>
+  <style>
+    body {
+      background: #222;
+      color: white;
+      position: relative;
+      font-size: .9em;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #test {
+      position: fixed;
+      top: 100px;
+      right: 100px;
+      bottom: 100px;
+      left: 100px;
+      background: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="test"></div>
+  <div id="test1"></div>
+  <script type="text/javascript">
+    function testEvent(event) {
+      console.log("testEvent", event);
+      document.getElementById("test1").innerHTML = "touch start"
+      if (event.type === "mouseover") {
+        document.getElementById("test1").innerHTML = "mouse over"
+      }
+      event.preventDefault();
+    }
+
+    var ele = document.getElementById("test");
+    ele.addEventListener("touchstart", testEvent);
+    ele.addEventListener("mouseover", testEvent);
+  </script>
+</body>
+
+</html>

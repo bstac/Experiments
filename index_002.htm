@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#grad {
+    height: 600px;
+    width: 600px;
+    background: -webkit-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Fx 3.6 to 15 */
+    background: radial-gradient(circle, white, GhostWhite, AliceBlue); /* Standard syntax (must be last) */
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script>
+function loadDoc3() {
+   var form = document.createElement("form");
+    form.setAttribute("method", "POST");
+    form.setAttribute("action", "cgi-bin/test.py");
+    form.submit();
+}
+function transformPolygon() {
+    var myPolygon = d3.select(document.getElementById('poly_1'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('fill','green')
+      .attr('points','0,0 300,0 200,200 00,200')
+}
+function hoverPoly() {
+    var myPolygon = d3.select(document.getElementById('poly_1'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('fill','green')
+      .attr('points','0,0 300,0 200,200 00,200')
+} 
+</script>
+</head>
+<body>
+
+<div id="grad">
+<svg height="600" width="600">
+<polygon id="poly_1" points="210,304 95,355 165,438 215,312" style="fill:red;stroke:purple;stroke-width:1" 
+	onclick="transformPolygon()" onmouseover="hoverPoly()"/>
+<polygon id="poly_2" points="215,320 162,462 291,462 226,320 " style="fill:purple;stroke:purple;stroke-width:1" onclick="loadDoc3()"/>
+<polygon id="poly_3" points="226,315 300,472 427,385 238,307 " style="fill:navy;stroke:purple;stroke-width:1" />
+<polygon id="poly_4" points="245,307 450,388 450,208 245,295 " style="fill:green;stroke:purple;stroke-width:1" />
+<polygon id="poly_5" points="242,291 464,199 338,30 230,275 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon id="poly_6" points="230,271 338,15 84,15 208,271 " style="fill:yellow;stroke:purple;stroke-width:1" />
+</svg>
+</div>
+</body>
+</html>

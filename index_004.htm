@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#grad {
+    height: 600px;
+    width: 600px;
+    background: -webkit-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Fx 3.6 to 15 */
+    background: radial-gradient(circle, white, GhostWhite, AliceBlue); /* Standard syntax (must be last) */
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script>
+function loadDoc3() {
+   var form = document.createElement("form");
+    form.setAttribute("method", "POST");
+    form.setAttribute("action", "cgi-bin/test.py");
+    form.submit();
+}
+function hoverPoly1() {
+    var myPolygon = d3.select(document.getElementById('poly_1'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','0,0 300,0 200,200 00,200')
+}
+function loadImage() {
+    var myPolygon = d3.select(document.getElementById('poly_1'))
+    myPolygon
+      .transition()
+      .duration(5000)
+      .ease("elastic")
+      .attr('points','210,304 95,355 165,438 215,312')
+    myPolygon = d3.select(document.getElementById('poly_2'))
+    myPolygon
+      .transition()
+      .duration(6000)
+      .ease("elastic")
+      .attr('points','215,320 162,462 291,462 226,320')
+myPolygon = d3.select(document.getElementById('poly_3'))
+    myPolygon
+      .transition()
+      .duration(7000)
+      .ease("elastic")
+      .attr('points','226,315 300,472 427,385 238,307')
+myPolygon = d3.select(document.getElementById('poly_4'))
+    myPolygon
+      .transition()
+      .duration(8000)
+      .ease("elastic")
+      .attr('points','245,307 450,388 450,208 245,295')
+myPolygon = d3.select(document.getElementById('poly_5'))
+    myPolygon
+      .transition()
+      .duration(9000)
+      .ease("elastic")
+      .attr('points','242,291 464,199 338,30 230,275')
+myPolygon = d3.select(document.getElementById('poly_6'))
+    myPolygon
+      .transition()
+      .duration(10000)
+      .ease("elastic")
+      .attr('points','230,271 338,15 84,15 208,271')
+}
+</script>
+</head>
+<body onload="loadImage()">
+
+<div id="grad">
+<svg height="600" width="600">
+
+<polygon points="220,300 220,300 219,302 220,300 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="220,300 219,302 221,304 220,300 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="220,300 221,304 226,302 220,300 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="220,300 226,302 228,297 220,300 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="220,300 228,297 224,291 220,300 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="220,300 224,291 216,289 220,299 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="220,299 216,289 207,295 219,300 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="219,300 207,295 205,306 219,300 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="219,300 205,306 213,317 220,301 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="220,301 213,317 227,319 220,301 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="220,301 227,319 240,308 222,300 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="222,300 240,308 242,291 222,300 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="222,300 242,291 230,276 221,298 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="221,298 230,276 210,274 219,298 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="219,298 210,274 192,289 218,299 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="218,299 192,289 191,312 218,301 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="218,301 191,312 207,331 219,303 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="219,303 207,331 233,333 221,303 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="221,303 233,333 255,314 223,301 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="223,301 255,314 257,285 223,299 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="223,299 257,285 236,261 221,297 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="221,297 236,261 204,260 219,296 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="219,296 204,260 178,283 216,299 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="216,299 178,283 176,318 216,301 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="216,301 176,318 201,346 219,304 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="219,304 201,346 239,348 221,304 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="221,304 239,348 269,320 224,302 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="224,302 269,320 271,279 225,298 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon points="225,298 271,279 242,247 222,295 " style="fill:lime;stroke:purple;stroke-width:1" />
+
+
+</svg>
+</div>
+</body>
+</html>

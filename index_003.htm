@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#grad {
+    height: 600px;
+    width: 600px;
+    background: -webkit-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Fx 3.6 to 15 */
+    background: radial-gradient(circle, white, GhostWhite, AliceBlue); /* Standard syntax (must be last) */
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script>
+function loadDoc3() {
+   var form = document.createElement("form");
+    form.setAttribute("method", "POST");
+    form.setAttribute("action", "cgi-bin/test.py");
+    form.submit();
+}
+function hoverPoly1() {
+    var myPolygon = d3.select(document.getElementById('poly_1'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','0,0 300,0 200,200 00,200')
+}
+function loadImage() {
+    var myPolygon = d3.select(document.getElementById('poly_1'))
+    myPolygon
+      .transition()
+      .duration(5000)
+      .ease("elastic")
+      .attr('points','210,304 95,355 165,438 215,312')
+    myPolygon = d3.select(document.getElementById('poly_2'))
+    myPolygon
+      .transition()
+      .duration(6000)
+      .ease("elastic")
+      .attr('points','215,320 162,462 291,462 226,320')
+myPolygon = d3.select(document.getElementById('poly_3'))
+    myPolygon
+      .transition()
+      .duration(7000)
+      .ease("elastic")
+      .attr('points','226,315 300,472 427,385 238,307')
+myPolygon = d3.select(document.getElementById('poly_4'))
+    myPolygon
+      .transition()
+      .duration(8000)
+      .ease("elastic")
+      .attr('points','245,307 450,388 450,208 245,295')
+myPolygon = d3.select(document.getElementById('poly_5'))
+    myPolygon
+      .transition()
+      .duration(9000)
+      .ease("elastic")
+      .attr('points','242,291 464,199 338,30 230,275')
+myPolygon = d3.select(document.getElementById('poly_6'))
+    myPolygon
+      .transition()
+      .duration(10000)
+      .ease("elastic")
+      .attr('points','230,271 338,15 84,15 208,271')
+}
+</script>
+</head>
+<body onload="loadImage()">
+
+<div id="grad">
+<svg height="600" width="600">
+<polygon id="poly_1" points="220,300 220,300 219,303 220,300 " style="fill:red;stroke:purple;stroke-width:1" 
+	onclick="transformPolygon()" onmouseover="hoverPoly1()" />
+<polygon id="poly_2" points="220,300 219,303 224,309 220,300 " style="fill:purple;stroke:purple;stroke-width:1" 
+	onclick="loadDoc3()"/>
+<polygon id="poly_3" points="220,300 224,309 239,307 221,300 " style="fill:navy;stroke:purple;stroke-width:1" />
+<polygon id="poly_4" points="221,300 239,307 251,287 222,299 " style="fill:green;stroke:purple;stroke-width:1" />
+<polygon id="poly_5" points="222,299 251,287 239,253 221,296 " style="fill:lime;stroke:purple;stroke-width:1" />
+<polygon id="poly_6" points="221,296 239,253 193,234 218,294 " style="fill:yellow;stroke:purple;stroke-width:1" />
+</svg>
+</div>
+</body>
+</html>

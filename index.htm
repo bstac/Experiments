@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#grad {
+    height: 600px;
+    width: 600px;
+    background: -webkit-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, white, GhostWhite, AliceBlue); /* For Fx 3.6 to 15 */
+    background: radial-gradient(circle, white, GhostWhite, AliceBlue); /* Standard syntax (must be last) */
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js">
+</script>
+<script>
+var ggg = "text"
+function loadDoc1(e) {
+    ggg= "mmm";
+    document.getElementById("tt").innerHTML = "runs";
+    unhoverPoly6()
+    e.target.click();
+    preventDefault(e);
+}
+function loadDoc4(e) {
+    document.getElementById("tt").innerHTML = "runner";
+    hoverPoly6()
+    preventDefault(e);
+}
+function loadDoc2() {
+    document.getElementById("tt").innerHTML = ggg;
+    var form1 = document.getElementById("form_1")
+    document.getElementById("tt").innerHTML = ggg+"11";
+    form1.submit();
+    document.getElementById("tt").innerHTML = ggg+"44";
+}
+function loadDoc3() {
+   var form = document.createElement("form");
+    form.setAttribute("method", "POST");
+    form.setAttribute("action", "cgi-bin/test.py");
+    form.submit();
+}
+function hoverPoly1() {
+    var myPolygon = d3.select(document.getElementById('poly_1'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','200,352 80,415 157,498 212,366')
+}
+function unhoverPoly1() {
+    var myPolygon = d3.select(document.getElementById('poly_1'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','200,352 95,405 165,488 212,366')
+}
+function hoverPoly2() {
+    var myPolygon = d3.select(document.getElementById('poly_2'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','215,370 168,523 285,523 226,370')
+}
+function unhoverPoly2() {
+    var myPolygon = d3.select(document.getElementById('poly_2'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','215,370 162,512 291,512 226,370')
+}
+function hoverPoly3() {
+    var myPolygon = d3.select(document.getElementById('poly_3'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','230,368 310,525 425,440 240,360')
+}
+function unhoverPoly3() {
+    var myPolygon = d3.select(document.getElementById('poly_3'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','230,368 300,522 427,435 240,360')
+}
+function hoverPoly4() {
+    var myPolygon = d3.select(document.getElementById('poly_4'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','245,356 457,432 457,264 245,345')
+}
+function unhoverPoly4() {
+    var myPolygon = d3.select(document.getElementById('poly_4'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','245,357 450,438 450,260 245,345')
+}
+function hoverPoly5() {
+    var myPolygon = d3.select(document.getElementById('poly_5'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','242,341 466,242 344,85 232,325')
+}
+function unhoverPoly5() {
+    var myPolygon = d3.select(document.getElementById('poly_5'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','242,341 463,249 338,80 232,325')
+}
+function hoverPoly6() {
+    var myPolygon = d3.select(document.getElementById('poly_6'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','230,321 330,60 90,60 208,321')
+}
+function unhoverPoly6() {
+    var myPolygon = d3.select(document.getElementById('poly_6'))
+    myPolygon
+      .transition()
+      .duration(1500)
+      .ease("elastic")
+      .attr('points','230,321 338,65 84,65 208,321')
+}
+function loadImage() {
+	var block = d3.select(".block");
+	block.on("touchstart", loadDoc4);
+	block.on("touchend", loadDoc1);
+    var myPolygon = d3.select(document.getElementById('poly_1'))
+    myPolygon
+      .transition()
+      .duration(3000)
+      .ease("elastic")
+      .attr('points','200,352 95,405 165,488 212,366')
+    myPolygon = d3.select(document.getElementById('poly_2'))
+    myPolygon
+      .transition()
+      .duration(3500)
+      .ease("elastic")
+      .attr('points','215,370 162,512 291,512 226,370')
+	myPolygon = d3.select(document.getElementById('poly_3'))
+    myPolygon
+      .transition()
+      .duration(4000)
+      .ease("elastic")
+      .attr('points','230,368 300,522 427,435 240,360')
+	myPolygon = d3.select(document.getElementById('poly_4'))
+    myPolygon
+      .transition()
+      .duration(4500)
+      .ease("elastic")
+      .attr('points','245,357 450,438 450,260 245,345')
+	myPolygon = d3.select(document.getElementById('poly_5'))
+    myPolygon
+      .transition()
+      .duration(5000)
+      .ease("elastic")
+      .attr('points','242,341 463,249 338,80 232,325')
+	myPolygon = d3.select(document.getElementById('poly_6'))
+    myPolygon
+      .transition()
+      .duration(5500)
+      .ease("elastic")
+      .attr('points','230,321 338,65 84,65 208,321')
+}
+</script>
+</head>
+<body onload="loadImage()">
+<div id="grad">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="600" width="600">
+<polygon id="poly_1" points="220,350 220,350 219,353 220,350 " style="fill:red;stroke:purple;stroke-width:1" 
+	onclick="transformPolygon()" onmouseover="hoverPoly1()" onmouseout="unhoverPoly1()"/>
+<polygon id="poly_2" points="220,350 219,353 224,359 220,350 " style="fill:purple;stroke:purple;stroke-width:1" 
+	onclick="loadDoc3()" onmouseover="hoverPoly2()" onmouseout="unhoverPoly2()"/>
+<polygon id="poly_3" points="220,350 224,359 239,357 221,350 " style="fill:navy;stroke:purple;stroke-width:1"
+	onmouseover="hoverPoly3()" onmouseout="unhoverPoly3()"/>
+<polygon id="poly_4" points="221,350 239,357 251,337 222,349 " style="fill:green;stroke:purple;stroke-width:1"
+	onmouseover="hoverPoly4()" onmouseout="unhoverPoly4()"/>
+<polygon id="poly_5" points="222,349 251,337 239,303 221,346 " style="fill:lime;stroke:purple;stroke-width:1"
+	onmouseover="hoverPoly5()" onmouseout="unhoverPoly5()"/>
+<polygon id="poly_6" class="block" points="221,346 239,303 193,284 218,344 " style="fill:yellow;stroke:purple;stroke-width:1"
+	onclick="loadDoc2()" onmouseover="hoverPoly6()" onmouseout="unhoverPoly6()"/>
+
+</svg>
+</div>
+<div id="tt"></div>
+<form id="form_1" method="POST" action="cgi-bin/ajax.py"></form>
+</body>
+</html>
